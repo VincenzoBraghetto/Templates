@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: darkslategray;
+  min-height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input, label, button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input, button {
+  padding: 0.5em;
+  border: none;
+}
+
+button {
+  border-radius: 1em;
+}
+
+input {
+  border-radius: 0.2em;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0px 0px 2px 1px rgb(247, 247, 247);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 2px 1px gray;
+}
+
+input::placeholder {
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: normal;
+}
+
+form.container {
+  width: 30%;
+}
+
+form.container label {
+  margin-bottom: 0.35em;
+}
+
+form.container input {
+  margin-bottom: 1.5em;
+}
+
+form.container h1 {
+  margin: auto auto 0.8em auto;
+}
+
+form.container button {
+  margin-top: 1.5em;
+}
+
+
+

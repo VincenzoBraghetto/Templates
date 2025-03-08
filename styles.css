@@ -1,3 +1,5 @@
+/* Author: Vincenzo Braghetto */
+
 :root {
   --MAIN-COLOR: #cc9b0a;
   --MAIN-COLOR-ALT: #f4bc15;
@@ -6,6 +8,7 @@
   --PASSIVE-SHADOW: 0px 0px 3px 0px gainsboro;
   --ACTIVE-SHADOW: 0px 0px 2px 1px rgb(206, 206, 206);
   --MAIN-FONT-FAMILY: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  --MAIN-BORDER-RADIUS: 0.5em;
 }
 
 * {
@@ -25,7 +28,7 @@ body, html {
   flex-direction: column;
   background-color: white;
   padding: 2.33em;
-  border-radius: 0.5em;
+  border-radius: var(--MAIN-BORDER-RADIUS);
 }
 
 .centered {
@@ -126,11 +129,11 @@ form.container button {
 nav {
   display: flex;
   flex-direction: row;
-  --NAVBAR-COLOR: var(--MAIN-COLOR-ALT);
+  --NAVBAR-COLOR: var(--SECONDARY-COLOR);
   background-color: var(--NAVBAR-COLOR);
-  box-shadow: 0px 0px 3px 0px var(--NAVBAR-COLOR);
+  box-shadow: 0px 0px 1px 1px var(--NAVBAR-COLOR);
   justify-content: space-evenly;
-  padding: 1.5em;
+  padding: 1em 10%;
 }
 
 nav >:first-child {
@@ -138,11 +141,65 @@ nav >:first-child {
   background-color: blue;
 }
 
-nav a {
+nav > * {
   text-decoration: none;
-  background-color: green;
   margin: auto;
 }
+
+.grid {
+  display: grid;
+  margin: 1em;
+  width: auto;
+  grid-template-columns: repeat(3, 20%);
+  gap: 1.25em;
+}
+
+.grid > div {
+  background-color: var(--SECONDARY-COLOR);
+  border-radius: var(--MAIN-BORDER-RADIUS);
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0px 0px 1.5px 0px gainsboro;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: inherit;
+  margin: 1em auto 1.75em auto;
+  box-shadow: 0px 0px 1.5px 0.5px black;
+}
+
+.grid > div >:last-child {
+  text-align: left;
+}
+
+table {
+  width: auto;
+  text-align: center;
+  --TABLE-COLOR: var(--SECONDARY-COLOR);
+  background-color: var(--TABLE-COLOR);
+  border-radius: var(--MAIN-BORDER-RADIUS);
+  box-shadow: 0px 0px 1.5px 0px gainsboro;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th {
+  background-color: color-mix(in srgb, var(--TABLE-COLOR), var(--MAIN-COLOR) 40%);
+}
+
+th, td {
+  padding: 1em;
+}
+
+td {
+  box-shadow: 0px 0px 2px 0.5px var(--MAIN-COLOR);
+}
+
+tr:first-child th:first-child {border-top-left-radius: var(--MAIN-BORDER-RADIUS);}
+tr:first-child th:last-child {border-top-right-radius: var(--MAIN-BORDER-RADIUS);}
+tr:last-child td:first-child {border-bottom-left-radius: var(--MAIN-BORDER-RADIUS);}
+tr:last-child td:last-child {border-bottom-right-radius: var(--MAIN-BORDER-RADIUS);}
 
 
 

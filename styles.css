@@ -9,6 +9,10 @@
   --ACTIVE-SHADOW: 0px 0px 2px 1px rgb(206, 206, 206);
   --MAIN-FONT-FAMILY: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   --MAIN-BORDER-RADIUS: 0.5em;
+  --NEGATIVE-COLOR: rgb(205, 0, 0);
+  --NEGATIVE-COLOR-LIGHT: rgb(255, 204, 204);
+  --POSITIVE-COLOR: green;
+  --POSITIVE-COLOR-LIGHT: rgb(190, 255, 190);
 }
 
 * {
@@ -56,11 +60,8 @@ button {
   transition: all 0.2s ease;
   font-weight: bold;
   box-shadow: var(--PASSIVE-SHADOW);
-  margin: auto;
-}
-
-input, button {
-  padding: 0.65em;
+  font-size: 1.1rem;
+  padding: 0.5em;
   border: none;
 }
 
@@ -71,6 +72,7 @@ button:active {
 }
 
 input {
+  border: none;
   --INPUT-COLOR: var(--SECONDARY-COLOR);
   border-top-right-radius: 0.2em;
   outline: 0.5px solid transparent;
@@ -78,6 +80,7 @@ input {
   background-color: var(--INPUT-COLOR);
   border-left: 0.25em solid var(--MAIN-COLOR-ALT);
   transition: outline 0.4s;
+  padding: 0.65em;
 }
 
 input:focus {outline: 0.5px solid var(--MAIN-COLOR-ALT);}
@@ -88,6 +91,8 @@ input::placeholder {
   font-weight: normal;
   opacity: 0.7;
 }
+
+/* Generic form partial */
 
 form.container {
   width: 500px;
@@ -120,6 +125,8 @@ form.container button {margin-top: 1.5em;}
 
 /* Container de error */
 
+/* Navbar partial */
+
 .navbar {
   display: flex;
   --NAVBAR-COLOR: var(--SECONDARY-COLOR);
@@ -133,6 +140,8 @@ form.container button {margin-top: 1.5em;}
 
 .navbar li:first-child {width: 50%;}
 .navbar a {text-decoration: none;}
+
+/* Grid partial */
 
 .grid {
   display: grid;
@@ -159,6 +168,8 @@ form.container button {margin-top: 1.5em;}
 
 .grid p {text-align: left;}
 
+/* Table partial */
+
 table {
   width: auto;
   text-align: center;
@@ -183,7 +194,34 @@ tr:first-child th:last-child {border-top-right-radius: var(--MAIN-BORDER-RADIUS)
 tr:last-child td:first-child {border-bottom-left-radius: var(--MAIN-BORDER-RADIUS);}
 tr:last-child td:last-child {border-bottom-right-radius: var(--MAIN-BORDER-RADIUS);}
 
+.right-icon {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  margin: 0em 0em 0em 1em;
+}
 
+.left-icon {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  margin: 0em 1em 0em 0em;
+}
 
+.error {
+  border: 1.25px solid var(--NEGATIVE-COLOR);
+  background-color:var(--NEGATIVE-COLOR-LIGHT);
+  color: var(--NEGATIVE-COLOR);
+  font-weight: bold;
+  padding: 1.33em;
+  margin: 1em;
+}
 
-
+.success {
+  border: 1.25px solid var(--POSITIVE-COLOR);
+  background-color: var(--POSITIVE-COLOR-LIGHT);
+  color: var(--POSITIVE-COLOR);
+  font-weight: bold;
+  padding: 1.33em;
+  margin: 1em;
+}

@@ -2,12 +2,14 @@
 
 :root {
   --MAIN-COLOR: #cc9b0a;
-  --MAIN-COLOR-ALT: #f4bc15;
-  --SECONDARY-COLOR: rgb(235, 235, 235);
-  --TERTIARY-COLOR: #9ccc0a;
+  --MAIN-COLOR-LIGHT: #f4bc15;
+  --SNOW: rgb(244, 244, 244);
+  --LIGHT-GREEN: #9ccc0a;
+  --DARK-BROWN: #584200;
   --PASSIVE-SHADOW: 0px 0px 3px 0px gainsboro;
   --ACTIVE-SHADOW: 0px 0px 2px 1px rgb(206, 206, 206);
   --MAIN-FONT-FAMILY: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  --DARK-FONT-COLOR: rgb(24, 24, 24);
   --MAIN-BORDER-RADIUS: 0.5em;
   --NEGATIVE-COLOR: rgb(205, 0, 0);
   --NEGATIVE-COLOR-LIGHT: rgb(255, 204, 204);
@@ -25,6 +27,7 @@ body, html {
   background-color: var(--MAIN-COLOR);
   min-height: 100vh;
   font-family: var(--MAIN-FONT-FAMILY);
+  box-shadow: 0px 0px 6px 1px var(--SNOW) inset;
 }
 
 .container {
@@ -44,7 +47,7 @@ body, html {
 }
 
 hr {
-  color: var(--MAIN-COLOR-ALT);
+  color: var(--MAIN-COLOR-LIGHT);
   border-style: solid;
 }
 
@@ -55,7 +58,7 @@ input, label, button {
 
 button {
   border-radius: 100vw;
-  --BUTTON-COLOR: var(--TERTIARY-COLOR);
+  --BUTTON-COLOR: var(--LIGHT-GREEN);
   background-color: var(--BUTTON-COLOR);
   transition: all 0.2s ease;
   font-weight: bold;
@@ -73,17 +76,17 @@ button:active {
 
 input {
   border: none;
-  --INPUT-COLOR: var(--SECONDARY-COLOR);
+  --INPUT-COLOR: var(--SNOW);
   border-top-right-radius: 0.2em;
   outline: 0.5px solid transparent;
   border-bottom-right-radius: 0.2em;
   background-color: var(--INPUT-COLOR);
-  border-left: 0.25em solid var(--MAIN-COLOR-ALT);
+  border-left: 0.25em solid var(--MAIN-COLOR-LIGHT);
   transition: outline 0.4s;
   padding: 0.65em;
 }
 
-input:focus {outline: 0.5px solid var(--MAIN-COLOR-ALT);}
+input:focus {outline: 0.5px solid var(--MAIN-COLOR-LIGHT);}
 
 input::placeholder {
   font-size: 0.8em;
@@ -116,7 +119,7 @@ form.container label {
 
 form.container h1 {
   text-align: center;
-  text-shadow: 0px 0px 1px black;
+  text-shadow: var(--MAIN-ANTI-ALIASING)
 }
 
 form.container input {margin-bottom: 1.5em;}
@@ -129,17 +132,29 @@ form.container button {margin-top: 1.5em;}
 
 .navbar {
   display: flex;
-  --NAVBAR-COLOR: var(--SECONDARY-COLOR);
+  --NAVBAR-COLOR: var(--MAIN-COLOR-LIGHT);
   background-color: var(--NAVBAR-COLOR);
-  box-shadow: 0px 0px 1px 1px var(--NAVBAR-COLOR);
+  box-shadow: 0px 6px 32px 8px var(--SNOW) inset;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 10%;
-  list-style:  none;
+  padding: 1.5em 10%;
+  border-radius: 0.25em;
 }
 
-.navbar li:first-child {width: 50%;}
-.navbar a {text-decoration: none;}
+.navbar a:first-child {width: 30%;}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  --NAVBAR-TEXT-COLOR: var(--DARK-BROWN);
+  color: var(--NAVBAR-TEXT-COLOR);
+  text-shadow: 0px 0px 1px var(--NAVBAR-TEXT-COLOR);
+  transition: color 0.2s ease;
+}
+ 
+.navbar a:hover {
+  opacity: 0.7;
+}
 
 /* Grid partial */
 
@@ -152,7 +167,7 @@ form.container button {margin-top: 1.5em;}
 }
 
 .grid > div {
-  background-color: var(--SECONDARY-COLOR);
+  background-color: var(--SNOW);
   border-radius: var(--MAIN-BORDER-RADIUS);
   text-align: center;
   padding: 1em;
@@ -173,7 +188,7 @@ form.container button {margin-top: 1.5em;}
 table {
   width: auto;
   text-align: center;
-  --TABLE-COLOR: var(--SECONDARY-COLOR);
+  --TABLE-COLOR: var(--SNOW);
   background-color: var(--TABLE-COLOR);
   border-radius: var(--MAIN-BORDER-RADIUS);
   box-shadow: 0px 0px 1.5px 0px gainsboro;
@@ -208,20 +223,26 @@ tr:last-child td:last-child {border-bottom-right-radius: var(--MAIN-BORDER-RADIU
   margin: 0em 1em 0em 0em;
 }
 
-.error {
-  border: 1.25px solid var(--NEGATIVE-COLOR);
+.error-container {
+  display: inline-block;
+  border: 1px solid var(--NEGATIVE-COLOR);
   background-color:var(--NEGATIVE-COLOR-LIGHT);
   color: var(--NEGATIVE-COLOR);
+  box-shadow: 0px 0px 3px 0px var(--NEGATIVE-COLOR);
   font-weight: bold;
   padding: 1.33em;
   margin: 1em;
+  border-radius: var(--MAIN-BORDER-RADIUS);
 }
 
-.success {
-  border: 1.25px solid var(--POSITIVE-COLOR);
+.success-container {
+  display: inline-block;
+  border: 1px solid var(--POSITIVE-COLOR);
   background-color: var(--POSITIVE-COLOR-LIGHT);
+  box-shadow: 0px 0px 3px 0px var(--POSITIVE-COLOR);
   color: var(--POSITIVE-COLOR);
   font-weight: bold;
   padding: 1.33em;
   margin: 1em;
+  border-radius: var(--MAIN-BORDER-RADIUS);
 }

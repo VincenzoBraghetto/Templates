@@ -40,10 +40,9 @@ body, html {
 
 .centered {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 hr {
@@ -51,7 +50,7 @@ hr {
   border-style: solid;
 }
 
-input, label, button {
+input, label, button, textarea {
   font-size: inherit;
   font-family: inherit;
 }
@@ -74,7 +73,7 @@ button:active {
   box-shadow: var(--ACTIVE-SHADOW);
 }
 
-input {
+input, textarea {
   border: none;
   --INPUT-COLOR: var(--SNOW);
   border-top-right-radius: 0.2em;
@@ -86,7 +85,14 @@ input {
   padding: 0.65em;
 }
 
-input:focus {outline: 0.5px solid var(--MAIN-COLOR-LIGHT);}
+textarea {
+  min-height: 20vh;
+  max-width: 100%;
+}
+
+input:focus,
+textarea:focus 
+{outline: 0.5px solid var(--MAIN-COLOR-LIGHT);}
 
 input::placeholder {
   font-size: 0.8em;
@@ -103,6 +109,7 @@ form.container {
   min-width: 35%;
   max-height: 100vh;
   overflow-y: auto;
+  border-radius: inherit;
 }
 
 form.container label,
@@ -126,7 +133,9 @@ form.container input {margin-bottom: 1.5em;}
 form.container hr {margin: 2em 3.5em;}
 form.container button {margin-top: 1.5em;}
 
-/* Container de error */
+.small-spacing * {
+  margin-top: 1.25em;
+}
 
 /* Navbar partial */
 
@@ -149,7 +158,7 @@ form.container button {margin-top: 1.5em;}
   --NAVBAR-TEXT-COLOR: var(--DARK-BROWN);
   color: var(--NAVBAR-TEXT-COLOR);
   text-shadow: 0px 0px 1px var(--NAVBAR-TEXT-COLOR);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease-in-out;
 }
  
 .navbar a:hover {

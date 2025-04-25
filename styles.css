@@ -45,6 +45,13 @@ body, html {
   align-items: center;
 }
 
+.inline-centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 hr {
   color: var(--MAIN-COLOR-LIGHT);
   border-style: solid;

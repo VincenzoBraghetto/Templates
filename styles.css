@@ -163,6 +163,10 @@ form.container button {margin-top: 1.5em;}
   border-radius: 0.25em;
 }
 
+.navbar nav a {
+    margin-left: 3em;
+}
+
 .navbar a:first-child {width: 30%;}
 
 .navbar a {
@@ -176,6 +180,10 @@ form.container button {margin-top: 1.5em;}
  
 .navbar a:hover {
   opacity: 0.7;
+}
+
+.navbar > a:first-child:hover {
+    opacity: 1;
 }
 
 /* Grid partial */

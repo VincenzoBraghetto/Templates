@@ -163,15 +163,21 @@ form.container button {margin-top: 1.5em;}
   border-radius: 0.25em;
 }
 
-.navbar nav a {
-    margin-left: 3em;
+.navbar nav {
+    width: 40%;
+    display: flex;
+    align-items: center;
 }
 
-.navbar a:first-child {width: 30%;}
+.navbar > a:first-child {
+    display: flex;
+    width: 30%;
+}
 
 .navbar a {
   text-decoration: none;
   font-size: 1.1rem;
+  width: 100%;
   --NAVBAR-TEXT-COLOR: var(--DARK-BROWN);
   color: var(--NAVBAR-TEXT-COLOR);
   text-shadow: 0px 0px 1px var(--NAVBAR-TEXT-COLOR);
@@ -179,7 +185,7 @@ form.container button {margin-top: 1.5em;}
 }
  
 .navbar a:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .navbar > a:first-child:hover {

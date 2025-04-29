@@ -3,20 +3,23 @@
 :root {
   --MAIN-COLOR: #cc9b0a;
   --MAIN-COLOR-LIGHT: #f4bc15;
-  --SNOW: rgb(244, 244, 244);
-  --LIGHT-GREEN: #9ccc0a;
-  --DARK-BROWN: #584200;
+  --SECONDARY-COLOR: rgb(244, 244, 244);
+  --TERTIARY-COLOR: #9ccc0a;
+  --CUATERNARY-COLOR: #584200;
+
   --PASSIVE-SHADOW: 0px 0px 3px 0px gainsboro;
   --ACTIVE-SHADOW: 0px 0px 2px 1px rgb(206, 206, 206);
   --MAIN-FONT-FAMILY: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  --DARK-FONT-COLOR: rgb(24, 24, 24);
+  --MAIN-FONT-COLOR: rgb(24, 24, 24);
   --MAIN-BORDER-RADIUS: 0.5em;
+
   --NEGATIVE-COLOR: rgb(205, 0, 0);
   --NEGATIVE-COLOR-LIGHT: rgb(255, 204, 204);
   --POSITIVE-COLOR: green;
   --POSITIVE-COLOR-LIGHT: rgb(190, 255, 190);
 }
 
+/* RESET BROWSER DEFAULT STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +31,7 @@ body, html {
   background-color: var(--MAIN-COLOR);
   min-height: 100vh;
   font-family: var(--MAIN-FONT-FAMILY);
-  box-shadow: 0px 0px 6px 1px var(--SNOW) inset;
+  box-shadow: 0px 0px 6px 1px var(--SECONDARY-COLOR) inset;
 }
 
 .container {
@@ -66,7 +69,7 @@ input, label, button, textarea {
 
 button {
   border-radius: 100vw;
-  --BUTTON-COLOR: var(--LIGHT-GREEN);
+  --BUTTON-COLOR: var(--TERTIARY-COLOR);
   background-color: var(--BUTTON-COLOR);
   transition: all 0.2s ease;
   font-weight: bold;
@@ -84,7 +87,7 @@ button:active {
 
 input, textarea {
   border: none;
-  --INPUT-COLOR: var(--SNOW);
+  --INPUT-COLOR: var(--SECONDARY-COLOR);
   border-top-right-radius: 0.2em;
   outline: 0.5px solid transparent;
   border-bottom-right-radius: 0.2em;
@@ -156,7 +159,7 @@ form.container button {margin-top: 1.5em;}
   display: flex;
   --NAVBAR-COLOR: var(--MAIN-COLOR-LIGHT);
   background-color: var(--NAVBAR-COLOR);
-  box-shadow: 0px 6px 32px 8px var(--SNOW) inset;
+  box-shadow: 0px 6px 32px 8px var(--SECONDARY-COLOR) inset;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 10%;
@@ -178,7 +181,7 @@ form.container button {margin-top: 1.5em;}
   text-decoration: none;
   font-size: 1.1rem;
   width: 100%;
-  --NAVBAR-TEXT-COLOR: var(--DARK-BROWN);
+  --NAVBAR-TEXT-COLOR: var(--CUATERNARY-COLOR);
   color: var(--NAVBAR-TEXT-COLOR);
   text-shadow: 0px 0px 1px var(--NAVBAR-TEXT-COLOR);
   transition: color 0.2s ease-in-out;
@@ -203,7 +206,7 @@ form.container button {margin-top: 1.5em;}
 }
 
 .grid > div {
-  background-color: var(--SNOW);
+  background-color: var(--SECONDARY-COLOR);
   border-radius: var(--MAIN-BORDER-RADIUS);
   text-align: center;
   padding: 1em;
@@ -224,7 +227,7 @@ form.container button {margin-top: 1.5em;}
 table {
   width: auto;
   text-align: center;
-  --TABLE-COLOR: var(--SNOW);
+  --TABLE-COLOR: var(--SECONDARY-COLOR);
   background-color: var(--TABLE-COLOR);
   border-radius: var(--MAIN-BORDER-RADIUS);
   box-shadow: 0px 0px 1.5px 0px gainsboro;

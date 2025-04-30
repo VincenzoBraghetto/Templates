@@ -197,16 +197,20 @@ form.container button {
 	}
 
 	.navbar nav {
-		align-items: center;
 		flex-direction: column;
 		text-align: right;
 	}
 
-	.navbar nav a {
-		margin-top: 0.3em;
-		border-radius: 0.25em;
-		padding: 0.1em 0.3em 0.1em 0em;
-	}
+    .navbar nav a {
+        margin-top: 0.3em;
+        margin-left: auto;
+        border-radius: 0.25em;
+        padding: 0.1em 0.3em 0.1em 0em;
+        background-color: rgb(221, 221, 255);
+        min-width: 70%;
+        width: 200px;
+        max-width: 100%;
+    }
 }
 
 .navbar nav {

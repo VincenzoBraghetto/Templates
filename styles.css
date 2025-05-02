@@ -8,7 +8,7 @@
 	--LIGHT-BLACK: rgba(0, 0, 0, 0.2);
 
 	--PRIMARY-SHADOW: 0px 0px 2px 1px var(--LIGHT-BLACK);
-	--MAIN-FONT-FAMILY: /*'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+	--MAIN-FONT-FAMILY: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	--MAIN-FONT-COLOR: rgb(24, 24, 24);
 	--MAIN-BORDER-RADIUS: 0.5em;
 	--NEGATIVE-COLOR: rgb(205, 0, 0);
@@ -338,24 +338,28 @@ tr:last-child td:last-child {
 
 .error-container {
 	display: inline-block;
+    z-index: 1;
 	border: 1px solid var(--NEGATIVE-COLOR);
 	background-color: var(--NEGATIVE-COLOR-LIGHT);
+	box-shadow: 0px 0px 2px 0px var(--NEGATIVE-COLOR);
 	color: var(--NEGATIVE-COLOR);
-	box-shadow: 0px 0px 3px 0px var(--NEGATIVE-COLOR);
 	font-weight: bold;
-	padding: 1.33em;
+    font-size: 0.9em;
+	padding: 1.1em;
 	margin: 1em;
 	border-radius: var(--MAIN-BORDER-RADIUS);
 }
 
 .success-container {
 	display: inline-block;
+    z-index: 1;
 	border: 1px solid var(--POSITIVE-COLOR);
 	background-color: var(--POSITIVE-COLOR-LIGHT);
-	box-shadow: 0px 0px 3px 0px var(--POSITIVE-COLOR);
+	box-shadow: 0px 0px 2px 0px var(--POSITIVE-COLOR);
 	color: var(--POSITIVE-COLOR);
 	font-weight: bold;
-	padding: 1.33em;
+    font-size: 0.9em;
+	padding: 1.1em;
 	margin: 1em;
 	border-radius: var(--MAIN-BORDER-RADIUS);
 }

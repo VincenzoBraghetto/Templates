@@ -186,7 +186,8 @@ form.container button {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.5em 15%;
-	border-radius: 0.25em;
+	border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
 }
 
 @media screen and (max-width: 768px) {
@@ -261,7 +262,7 @@ footer {
 	gap: 1.25em;
 }
 
-.grid>div {
+.grid > div {
 	background-color: var(--SECONDARY-COLOR);
 	border-radius: var(--MAIN-BORDER-RADIUS);
 	text-align: center;

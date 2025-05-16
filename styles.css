@@ -30,6 +30,7 @@ html {
 	background-color: var(--PRIMARY-COLOR);
 	min-height: 100vh;
 	font-family: var(--MAIN-FONT-FAMILY);
+    color: var(--MAIN-FONT-COLOR);
 }
 
 .container {

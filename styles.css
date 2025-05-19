@@ -77,6 +77,9 @@ textarea {
 }
 
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	border-radius: 2em;
 	--BUTTON-COLOR: var(--TERTIARY-COLOR);
 	background-color: var(--BUTTON-COLOR);
@@ -201,15 +204,19 @@ form.container button {
 		text-align: right;
 	}
 
-    .navbar nav a {
+    .navbar nav a,
+    .navbar nav .log-out-button {
         margin-top: 0.3em;
         margin-left: auto;
-        border-radius: 0.25em;
         padding: 0.1em 0.3em 0.1em 0em;
-        background-color: rgb(221, 221, 255);
         min-width: 70%;
         width: 200px;
         max-width: 100%;
+    }
+
+    .navbar nav a {
+        border-radius: 0.25em;
+        background-color: color-mix(in srgb, var(--NAVBAR-COLOR), black 10%);; 
     }
 }
 
@@ -217,6 +224,7 @@ form.container button {
 	width: 40%;
 	display: flex;
 	gap: 10%;
+    text-wrap: nowrap;
 	align-items: center;
 }
 
@@ -365,3 +373,14 @@ tr:last-child td:last-child {
 	margin: 1em;
 	border-radius: var(--MAIN-BORDER-RADIUS);
 }
+
+.log-out-button {
+    background-color: var(--PRIMARY-COLOR);
+    color: white;
+    padding: 0.6em 1.2em;
+    margin-left: 5em;
+    width: 100%;
+}
+
+.log-out-button:hover {background-color: color-mix(in srgb, var(--PRIMARY-COLOR), black 25%);}
+.log-out-button:active {transform: scale(0.9);}

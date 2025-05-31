@@ -103,6 +103,7 @@ textarea {
 	--INPUT-COLOR: var(--SECONDARY-COLOR);
 	border-top-right-radius: 0.2em;
 	outline: 0.5px solid transparent;
+    color: var(--MAIN-FONT-COLOR);
 	border-bottom-right-radius: 0.2em;
 	background-color: var(--INPUT-COLOR);
 	border-left: 0.25em solid var(--PRIMARY-COLOR-LIGHT);
